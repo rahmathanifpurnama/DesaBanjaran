@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Desa Banjaran</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="page-styles.css" />
+    <link rel="stylesheet" href="pemerintah-styles.css" />
+    <link rel="stylesheet" href="idm.style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <img src="assets/images/Kabupaten_Pesawaran.png" alt="Logo Desa" />
+          <div class="nama-desa">
+            <h2>Desa Banjaran</h2>
+            <p>
+              Kec. Padang Cermin, Kab. Pesawaran <br />
+              Prov. Lampung
+            </p>
+          </div>
+        </div>
+
+        <div class="title">
+          <h1>
+            INFORMASI PUBLIK <br />
+            DESA BANJARAN
+          </h1>
+        </div>
+        <div class="prayer-schedule">
+          <div class="prayer-grid" id="prayerGrid">
+            <!-- Prayer times will be dynamically inserted here -->
+          </div>
+          <div class="prayer-footer" id="prayerFooter">
+            <!-- Date will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a href="index.html"
+              ><svg
+                class="home-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                /></svg
+            ></a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Profil Desa</a>
+            <div class="dropdown-content">
+              <a href="#profil-wilayah">Profil Wilayah Desa</a>
+              <a href="#profil-potensi">Profil Potensi Desa</a>
+              <a href="#sejarah-desa">Sejarah Desa</a>
+              <a href="#visi-misi">Visi Misi Desa</a>
+            </div>
+          </li>
+          <li>
+            <a
+              href="https://kampungkb.bkkbn.go.id/kampung/2201/banjaran"
+              target="_blank"
+              >Bkkbn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/home/home.aspx"
+              target="_blank"
+              >Meta Desa</a
+            >
+          </li>
+          <li>
+            <a href="https://rumahdataku.bkkbn.go.id/new/login" target="_blank"
+              >Rumah Data</a
+            >
+          </li>
+          <li><a href="#idm">IDM</a></li>
+          <li><a href="#UMKM">UMKM Desa</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main Section using Grid -->
+    <div class="main-container">
+      <!-- Kolom Kiri: Carousel + Artikel Terkini + Pagination -->
+      <div class="left-content">
+        <!-- Carousel Section -->
+        <div class="carousel">
+          <div class="carousel-slide">
+            <div class="carousel-item">
+              <a
+                href="https://banjaran-padangcermin.metadesa.id/pages/articles/artikel.aspx?id=14768"
+              >
+                <img
+                  src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-14768-utama_.jpg"
+                  alt="Slide 1"
+                />
+                <div class="carousel-caption">
+                  <h3>PERINGATAN HARI HARI LAHIR DESA BANJARAN KE-88</h3>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="https://banjaran-padangcermin.metadesa.id/pages/articles/artikel.aspx?id=5640"
+              >
+                <img
+                  src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5640-utama_.jpg"
+                  alt="Slide 2"
+                />
+                <div class="carousel-caption">
+                  <h3>PELATIHAN IMPLEMENTASI SMART VILLAGE PROVINSI LAMPUNG</h3>
+                </div>
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a
+                href="https://banjaran-padangcermin.metadesa.id/pages/articles/artikel.aspx?id=16708"
+              >
+                <img
+                  src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-16708-utama_.jpg"
+                  alt="Slide 3"
+                />
+                <div class="carousel-caption">
+                  <h3>Wisata Pantai Desa Banjaran</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Tombol PREV -->
+          <span class="carousel-button prev" onclick="moveSlide(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="m6.733,23.888l-.707-.707,10.827-10.827c.095-.095.146-.22.146-.354s-.052-.259-.146-.354L6.026.819l.707-.707,10.827,10.827
+                     c.283.283.439.66.439,1.061s-.156.777-.439,1.061l-10.827,10.827Z"
+              />
+            </svg>
+          </span>
+          <!-- Tombol NEXT -->
+          <span class="carousel-button next" onclick="moveSlide(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="m6.733,23.888l-.707-.707,10.827-10.827c.095-.095.146-.22.146-.354s-.052-.259-.146-.354L6.026.819l.707-.707,10.827,10.827
+                     c.283.283.439.66.439,1.061s-.156.777-.439,1.061l-10.827,10.827Z"
+              />
+            </svg>
+          </span>
+        </div>
+
+        <!-- Artikel Terkini -->
+        <div class="artikel-terkini">
+          <h2>Artikel Terkini</h2>
+          <div class="articles">
+            <!-- Artikel 1 -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/articles/artikel.aspx?id=5644"
+            >
+              <article>
+                <img
+                  src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5644-utama_.jpg"
+                  alt="Artikel 1"
+                  class="article-1"
+                />
+                <h3>Profil Masyrakat Desa</h3>
+                <p></p>
+              </article>
+            </a>
+
+            <!-- Artikel 2 -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/articles/artikel.aspx?id=5647"
+            >
+              <article>
+                <img
+                  src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5647-utama_.jpg"
+                  alt="Artikel 2"
+                  class="article-2"
+                />
+                <h3>Lembaga Desa</h3>
+                <p></p>
+              </article>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pagination Section (di bawah Artikel Terkini) -->
+        <div class="pagination-wrapper">
+          <!-- Info Pagination -->
+          <p class="pagination-info">Halaman 1 dari 1</p>
+
+          <!-- Container Tombol & Halaman -->
+          <div class="pagination-nav">
+            <!-- Tombol Prev -->
+            <button class="pagination-btn prev" aria-label="Sebelumnya">
+              <!-- Panah kiri -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="Outline"
+                viewBox="0 0 24 24"
+                width="512"
+                height="512"
+              >
+                <path
+                  d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"
+                />
+              </svg>
+            </button>
+
+            <!-- Halaman (misal 1,2,3...) -->
+            <button class="pagination-page active">1</button>
+
+            <button class="pagination-btn last" aria-label="Ke Akhir Halaman">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <!-- Misal, ikon chevron ke kanan ganda -->
+                <path
+                  d="M8.46 3.54a.75.75 0 0 0-1.06 1.06l6.54 6.54l-6.54 6.54a.75.75 0 1 0 1.06 1.06l7-7a.75.75 0 0 0 0-1.06l-7-7z"
+                />
+              </svg>
+            </button>
+
+            <!-- Tombol Next -->
+            <button class="pagination-btn next" aria-label="Berikutnya">
+              <!-- Panah kanan -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                id="Outline"
+                viewBox="0 0 24 24"
+                width="512"
+                height="512"
+              >
+                <g transform="rotate(180 12 12)">
+                  <path
+                    d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolom Kanan: Sidebar (Peta, Lokasi Balai Desa, dsb.) -->
+      <div class="sidebar">
+        <!-- Map Section -->
+        <div class="map-container">
+          <h3>Peta Desa Banjaran</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18687.770681440612!2d105.11417264060051!3d-5.620868596346017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e412eaa45ab6c69%3A0x86c08d9d17b4997a!2sBanjaran%2C%20Kec.%20Padang%20Cermin%2C%20Kabupaten%20Pesawaran%2C%20Lampung!5e0!3m2!1sid!2sid!4v1739593479964!5m2!1sid!2sid"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <div class="map-container">
+          <h3>Lokasi Balai Desa</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3407.127079831005!2d105.13622377364317!3d-5.605239260237678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e41294fd56f1a19%3A0x4aadac80b04c34d3!2sKantor%20Desa%20Banjaran!5e0!3m2!1sid!2sid!4v1739646565887!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+
+        <div class="Penduduk">
+          <h3>Jumlah Penduduk</h3>
+          <div class="penduduk-container">
+            <!-- Kotak Penduduk 1: PRIA -->
+            <div class="penduduk-box">
+              <div class="icon">
+                <!-- SVG untuk Pria (Contoh: Icon kedua) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                  width="512"
+                  height="512"
+                >
+                  <path
+                    d="M9.5,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm7.5,7.5v3c0,1.474-.81,2.75-2,3.444v6.556c0,.552-.447,1-1,1s-1-.448-1-1v-6h-2v6c0,.552-.447,1-1,1s-1-.448-1-1v-6.556c-1.19-.694-2-1.97-2-3.444v-3c0-2.206,1.794-4,4-4h2c2.206,0,4,1.794,4,4Z"
+                  />
+                </svg>
+              </div>
+              <div class="jumlah">1807</div>
+              <div class="label">PRIA</div>
+            </div>
+
+            <!-- Kotak Penduduk 2: WANITA -->
+            <div class="penduduk-box">
+              <div class="icon">
+                <!-- SVG yang sama, atau ikon lain jika Anda punya (untuk wanita) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  viewBox="0 0 24 24"
+                  width="512"
+                  height="512"
+                >
+                  <path
+                    d="M9.5,2.5c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5-1.119,2.5-2.5,2.5-2.5-1.119-2.5-2.5Zm7.5,7.5v3c0,1.474-.81,2.75-2,3.444v6.556c0,.552-.447,1-1,1s-1-.448-1-1v-6h-2v6c0,.552-.447,1-1,1s-1-.448-1-1v-6.556c-1.19-.694-2-1.97-2-3.444v-3c0-2.206,1.794-4,4-4h2c2.206,0,4,1.794,4,4Z"
+                  />
+                </svg>
+              </div>
+              <div class="jumlah">1725</div>
+              <div class="label">WANITA</div>
+            </div>
+
+            <!-- Kotak Penduduk 3: TOTAL -->
+            <div class="penduduk-box">
+              <div class="icon">
+                <!-- SVG untuk total (Icon pertama) -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="48"
+                  height="48"
+                >
+                  <path
+                    d="M12,17a4,4,0,1,1,4-4A4,4,0,0,1,12,17Zm6,4a3,3,0,0,0-3-3H9a3,3,0,0,0-3,3v3H18ZM18,8a4,4,0,1,1,4-4A4,4,0,0,1,18,8ZM6,8a4,4,0,1,1,4-4A4,4,0,0,1,6,8Zm0,5A5.968,5.968,0,0,1,7.537,9H3a3,3,0,0,0-3,3v3H6.349A5.971,5.971,0,0,1,6,13Zm11.651,2H24V12a3,3,0,0,0-3-3H16.463a5.952,5.952,0,0,1,1.188,6Z"
+                  />
+                </svg>
+              </div>
+              <div class="jumlah">3532</div>
+              <div class="label">TOTAL</div>
+            </div>
+          </div>
+        </div>
+        <div class="layanan-container">
+          <!-- Ganti judul "Komentar" menjadi "Layanan Mandiri" -->
+          <h3>Layanan Mandiri</h3>
+          <!-- Carousel Layanan -->
+          <div class="layanan-track" id="layananTrack">
+            <!-- Item 1: Surat Permohonan KTP -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/menu/loginlayananmandiri.aspx"
+            >
+              <div class="layanan-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  class="layanan-icon layanan-icon-ktp"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M10 20h4c3.771 0 5.657 0 6.828-1.172C22 17.657 22 15.771 22 12c0-.442-.002-1.608-.004-2H2c-.002.392 0 1.558 0 2c0 3.771 0 5.657 1.171 6.828C4.343 20 6.23 20 10 20"
+                    opacity="0.5"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M5.25 13.5a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75m0 3a.75.75 0 0 1 .75-.75h4a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M17.197 12.293c-.323-.043-.72-.043-1.152-.043h-.09c-.433 0-.83 0-1.152.043c-.356.048-.731.16-1.04.47c-.31.309-.422.684-.47 1.04c-.043.323-.043.72-.043 1.152v.09c0 .433 0 .83.043 1.152c.048.356.16.731.47 1.04c.309.31.684.422 1.04.47c.323.043.72.043 1.152.043h.09c.433 0 .83 0 1.152-.043c.356-.048.731-.16 1.04-.47c.31-.309.422-.684.47-1.04c.043-.323.043-.72.043-1.152v-.09c0-.433 0-.83-.043-1.152c-.048-.356-.16-.731-.47-1.04c-.309-.31-.684-.422-1.04-.47m-2.371 1.529l-.003.001l-.001.003a.703.703 0 0 0-.042.177c-.028.21-.03.504-.03.997s.002.787.03.997a.702.702 0 0 0 .042.177l.001.003l.003.001a.702.702 0 0 0 .177.042c.21.028.504.03.997.03s.787-.002.997-.03a.702.702 0 0 0 .177-.042l.003-.001l.001-.003a.702.702 0 0 0 .042-.177c.028-.21.03-.504.03-.997s-.002-.787-.03-.997a.703.703 0 0 0-.042-.177l-.001-.003l-.003-.001a.702.702 0 0 0-.177-.042c-.21-.028-.504-.03-.997-.03s-.787.002-.997.03a.702.702 0 0 0-.177.042"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M9.995 4h4.01c3.781 0 5.672 0 6.846 1.116c.846.803 1.083 1.96 1.149 3.884v1H2V9c.066-1.925.303-3.08 1.149-3.884C4.323 4 6.214 4 9.995 4"
+                  ></path>
+                </svg>
+                <h5>Surat Permohonan KTP</h5>
+              </div>
+            </a>
+            <!-- Item 2: Surat Permohonan KK -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/menu/loginlayananmandiri.aspx"
+            >
+              <div class="layanan-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  class="layanan-icon layanan-icon-kk"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M13.11 13.5a1.71 1.71 0 0 0-2.22 0a1.71 1.71 0 0 1-.973.403a1.71 1.71 0 0 0-1.569 1.569c-.028.359-.17.7-.403.973a1.71 1.71 0 0 0 0 2.219a1.7 1.7 0 0 1 .403.973a1.71 1.71 0 0 0 1.57 1.57c.358.028.699.169.973.402a1.71 1.71 0 0 0 2.218 0a1.71 1.71 0 0 1 .973-.403a1.71 1.71 0 0 0 1.57-1.569c.028-.358.169-.7.402-.973a1.71 1.71 0 0 0 0-2.219a1.71 1.71 0 0 1-.403-.973a1.71 1.71 0 0 0-1.569-1.569a1.71 1.71 0 0 1-.973-.403m.902 3.603a.75.75 0 1 0-1.024-1.097l-1.63 1.523l-.346-.323a.75.75 0 0 0-1.024 1.097l.857.8a.75.75 0 0 0 1.024 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M2 12V8c0-2.828 0-4.243.879-5.121C3.757 2 5.172 2 8 2h8c2.828 0 4.243 0 5.121.879C22 3.757 22 5.172 22 8v4c0 2.828 0 4.243-.879 5.121c-.835.836-2.156.877-4.717.879a1.71 1.71 0 0 0-.35-1.555 1.71 1.71 0 0 1-.403-.973 1.71 1.71 0 0 0-1.569-1.569 1.71 1.71 0 0 1-.973-.403 1.71 1.71 0 0 0-2.219 0 1.71 1.71 0 0 1-.973.403 1.71 1.71 0 0 0-1.569 1.569c-.028.359-.17.7-.403.973A1.71 1.71 0 0 0 7.595 18c-2.56-.002-3.88-.043-4.716-.879C2 16.243 2 14.828 2 12"
+                    opacity="0.5"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M8.25 6A.75.75 0 0 1 9 5.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 6M7 8.75a.75.75 0 0 0 0 1.5h10a.75.75 0 0 0 0-1.5z"
+                  ></path>
+                </svg>
+                <h5>Surat Permohonan KK</h5>
+              </div>
+            </a>
+            <!-- Item 3: Surat Keterangan Tidak Mampu -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/menu/loginlayananmandiri.aspx"
+            >
+              <div class="layanan-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  class="layanan-icon layanan-icon-tidak-mampu"
+                >
+                  >
+                  <!-- Path 1 (opacity="0.5") -->
+                  <path
+                    fill="currentColor"
+                    d="M6.26 21.388H6c-.943 0-1.414 0-1.707-.293C4 20.804 4 20.332 4 19.389v-1.112c0-.518 0-.777.133-1.009c.133-.231.334-.348.736-.582c2.646-1.539 6.403-2.405 8.91-.91c.168.101.32.223.45.368a1.492 1.492 0 0 1-.126 2.134a.998.998 0 0 1-.427.24c.12-.014.235-.03.345-.047c.911-.145 1.676-.633 2.376-1.162l1.808-1.365a1.887 1.887 0 0 1 2.22 0c.573.433.749 1.146.386 1.728c-.423.678-1.019 1.545-1.591 2.075c-.573.53-1.426 1.004-2.122 1.34c-.772.373-1.624.587-2.491.728c-1.758.284-3.59.24-5.33-.118a15.031 15.031 0 0 0-3.017-.308"
+                    opacity="0.5"
+                  ></path>
+
+                  <!-- Path 2 -->
+                  <path
+                    fill="currentColor"
+                    d="M6.586 2.586c-.367.367-.504.873-.555 1.664A2.25 2.25 0 0 0 8.25 2.03c-.79.052-1.297.189-1.664.556m10.828 0c-.367-.367-.873-.504-1.664-.555a2.25 2.25 0 0 0 2.22 2.219c-.052-.79-.189-1.297-.556-1.664m0 6.828c-.367.367-.873.504-1.664.555a2.25 2.25 0 0 1 2.22-2.219c-.052.79-.189 1.297-.556 1.664m-10.828 0c.367.367.873.504 1.664.555A2.25 2.25 0 0 0 6.03 7.75c.052.79.189 1.297.556 1.664"
+                  ></path>
+
+                  <!-- Path 3 (fill-rule & clip-rule) -->
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M6 5.75A3.75 3.75 0 0 0 9.75 2h4.5A3.75 3.75 0 0 0 18 5.75v.5A3.75 3.75 0 0 0 14.25 10h-4.5A3.75 3.75 0 0 0 6 6.25zM12 7a1 1 0 1 0 0-2a1 1 0 0 0 0 2"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <h5>Surat Keterangan Tidak Mampu</h5>
+              </div>
+            </a>
+            <!-- Item 4: Surat Keterangan Usaha -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/menu/loginlayananmandiri.aspx"
+            >
+              <div class="layanan-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  class="layanan-icon layanan-icon-keterangan-usaha"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M16.528 2H7.472c-1.203 0-1.804 0-2.288.299c-.483.298-.752.836-1.29 1.912L2.491 7.76c-.325.82-.608 1.786-.062 2.479A2 2 0 0 0 6 9a2 2 0 1 0 4 0a2 2 0 1 0 4 0a2 2 0 1 0 4 0a2 2 0 0 0 3.571 1.238c.546-.693.262-1.659-.062-2.479l-1.404-3.548c-.538-1.076-.806-1.614-1.29-1.912C18.332 2 17.73 2 16.528 2"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M9.5 21.25V18.5c0-.935 0-1.402.201-1.75a1.5 1.5 0 0 1 .549-.549C10.598 16 11.065 16 12 16s1.402 0 1.75.201a1.5 1.5 0 0 1 .549.549c.201.348.201.815.201 1.75v2.75z"
+                    clip-rule="evenodd"
+                    opacity="0.5"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M14.5 21.25H2a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5H14.5z"
+                  ></path>
+                </svg>
+                <h5>Surat Keterangan Usaha</h5>
+              </div>
+            </a>
+            <!-- Item 5: Surat Keterangan Domisili -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/menu/loginlayananmandiri.aspx"
+            >
+              <div class="layanan-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  class="layanan-icon layanan-icon-keterangan-domisili"
+                >
+                  <path
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                    d="M12 2c4.714 0 7.071 0 8.535 1.464c.504.504.835 1.114 1.052 1.889L5.353 21.587c-.775-.217-1.385-.548-1.889-1.052C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2M5.5 8.757c0 1.785 1.117 3.868 2.86 4.613c.406.173.874.173 1.28 0c1.743-.745 2.86-2.828 2.86-4.613C12.5 6.958 10.933 5.5 9 5.5S5.5 6.958 5.5 8.757"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M10.5 9a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M21.89 7.172C22 8.433 22 10.006 22 12c0 4.134 0 6.455-.987 7.951L15.06 14zm-1.938 13.84l-5.951-5.951l-6.83 6.828c1.262.111 2.835.111 4.83.111c4.134 0 6.455 0 7.951-.988"
+                    opacity="0.5"
+                  ></path>
+                </svg>
+
+                <h5>Surat Keterangan Domisili</h5>
+              </div>
+            </a>
+            <!-- Item 6: Surat Keterangan Izin Keramaian -->
+            <a
+              href="https://banjaran-padangcermin.metadesa.id/pages/menu/loginlayananmandiri.aspx"
+            >
+              <div class="layanan-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80"
+                  height="80"
+                  viewBox="0 0 24 24"
+                  class="layanan-icon layanan-icon-keterangan-izin-keramaian"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M15.5 7.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M19.5 7.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m-15 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 0 0-5 0"
+                    opacity="0.4"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M18 16.5c0 1.933-2.686 3.5-6 3.5s-6-1.567-6-3.5S8.686 13 12 13s6 1.567 6 3.5"
+                  ></path>
+                  <path
+                    fill="currentColor"
+                    d="M22 16.5c0 1.38-1.79 2.5-4 2.5s-4-1.12-4-2.5s1.79-2.5 4-2.5s4 1.12 4 2.5m-20 0C2 17.88 3.79 19 6 19s4-1.12 4-2.5S8.21 14 6 14s-4 1.12-4 2.5"
+                    opacity="0.4"
+                  ></path>
+                </svg>
+                <h5>Surat Keterangan Izin Keramaian</h5>
+              </div>
+            </a>
+          </div>
+          <!-- Tombol Navigasi Carousel -->
+          <button class="layanan-btn layanan-prev-btn" id="prevBtn">
+            <!-- Panah ke kiri -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M15.54 3.54a.75.75 0 0 1 1.06 1.06L10.06 11.12l6.54 6.54a.75.75 0 0 1-1.06 1.06l-7-7a.75.75 0 0 1 0-1.06l7-7z"
+              />
+            </svg>
+          </button>
+
+          <!-- Tombol NEXT (Chevron Kanan) -->
+          <button class="layanan-btn layanan-next-btn" id="nextBtn">
+            <!-- Panah ke kanan -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M8.46 3.54a.75.75 0 0 0-1.06 1.06l6.54 6.54l-6.54 6.54a.75.75 0 1 0 1.06 1.06l7-7a.75.75 0 0 0 0-1.06l-7-7z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="pemerintah-wrapper">
+      <div class="pemerintah-desa">
+        <h2>Aparatur Desa</h2>
+
+        <!-- Kontainer utama untuk tombol & track -->
+        <div class="desa-container">
+          <!-- Tombol Navigasi Kiri -->
+
+          <!-- Container utama berisi card pejabat -->
+          <div class="desa-wrapper">
+            <div class="desa-track">
+              <!-- Card Pejabat 1 -->
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324105348.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>MAT HAMZAH</h4>
+                <p>Kepala Desa</p>
+              </div>
+              <!-- Card Pejabat 2 -->
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809051803730005.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>ASRUL YANI</h4>
+                <p>Sekretaris Desa</p>
+              </div>
+              <!-- Card Pejabat 3 -->
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324110044.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>KARDI</h4>
+                <p>Kepala Seksi Pemerintahan</p>
+              </div>
+              <!-- Tambah card sesuai kebutuhan -->
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324110026.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>EDI PURNOMO</h4>
+                <p>Kepala Seksi Kesejahteraan</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809053012810002.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>DEDI FEBERLIANSYAH</h4>
+                <p>Kepala Seksi Pelayanan</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809055203890009.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>TRIYANI</h4>
+                <p>Kepala Urusan tata Usaha Dan Umum</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324110125.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>PARYANTO</h4>
+                <p>Kepala Urusan Keuangan</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324110000.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>HANDOKO</h4>
+                <p>Kepala Urusan Perencanaan</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809051906870003.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>WAWAN SETIAWAN</h4>
+                <p>Kepala Dusun</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324110155.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>ZAINUDIN</h4>
+                <p>Kepala Dusun</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809051808850010.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>AGUS SUPRIADI</h4>
+                <p>Kepala Dusun</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809052704900003.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>AGUS EDI KUSWANTO</h4>
+                <p>Kepala Dusun</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_3518165603920001.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>SELFIA MAGARETA</h4>
+                <p>Kepala Dusun</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324110224.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>BUYUNG</h4>
+                <p>Kepala Dusun</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809050103840006.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>MARYADI</h4>
+                <p>Kepala Dusun</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_140324105322.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>SUHERI</h4>
+                <p>Badan Permusyawaratan Desa</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809054703830008.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>MARIYATUN</h4>
+                <p>Badan Permusyawaratan Desa</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809050906810007.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>YULIANTO</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809051512530002.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>JAHARI</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809050307720008.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>SUNARTO</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809051108720008.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>TRISNO WAHYONO</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809050802720006.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>TARMUJI</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809050107730053.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>SUGIYANTO</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809051604860010.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>BOYAMSAH</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809050507610003.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>SAHIR</h4>
+                <p>Lembaga</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809052105750001.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>SUPARTA</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809050902730002.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>Nama Pejabat</h4>
+                <p>Lainnya</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_180905430500000.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>ANNISA FITRIANI</h4>
+                <p>Operator IT</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809056903970008.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>DIAH AYU LESTARI</h4>
+                <p>Operator IT</p>
+              </div>
+              <div class="desa-card">
+                <img
+                  src="http://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/foto_aparat/18_09_05_2001_Aparat_1809051904120025.png"
+                  alt="Foto Pejabat Desa"
+                />
+                <h4>AMIN SUTOYO</h4>
+                <p>Lainnya</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Navigasi Kiri -->
+          <button class="desa-btn prev" aria-label="Sebelumnya">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M15.54 3.54a.75.75 0 0 1 1.06 1.06L10.06 11.12l6.54 6.54a.75.75 0 0 1-1.06 1.06l-7-7a.75.75 0 0 1 0-1.06l7-7z"
+              />
+            </svg>
+          </button>
+
+          <!-- Tombol Navigasi Kanan -->
+          <button class="desa-btn next" aria-label="Berikutnya">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M8.46 3.54a.75.75 0 0 0-1.06 1.06l6.54 6.54l-6.54 6.54a.75.75 0 1 0 1.06 1.06l7-7a.75.75 0 0 0 0-1.06l-7-7z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bagian Galeri -->
+      <div class="galeri">
+        <h2>Galeri</h2>
+        <div class="galeri-grid">
+          <!-- Item 1 (Foto) -->
+          <div class="galeri-item">
+            <img
+              src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-14768-utama_.jpg"
+              alt="Foto Galeri"
+            />
+          </div>
+          <!-- Item 2 (Foto) -->
+          <div class="galeri-item">
+            <img
+              src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5640-utama_.jpg"
+              alt="Foto Galeri"
+            />
+          </div>
+          <!-- Item 3 (Video YouTube) -->
+          <div class="galeri-item">
+            <iframe
+              width="320"
+              height="180"
+              src="https://www.youtube.com/embed/sFJ97E7xevc"
+              title="Profil Desa Banjaran"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Tambah item sesuai kebutuhan -->
+          <div class="galeri-item">
+            <iframe
+              width="320"
+              height="180"
+              src="https://www.youtube.com/embed/KRVJdjwvETI"
+              title="Persiapan Lomba PBB se-kecamatan"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="galeri-item">
+            <img
+              src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5646-utama_.jpg"
+              alt="Foto Galeri"
+            />
+          </div>
+          <div class="galeri-item">
+            <img
+              src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5647-utama_.jpg"
+              alt="Foto Galeri"
+            />
+          </div>
+          <div class="galeri-item">
+            <img
+              src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5645-utama_.jpg"
+              alt="Foto Galeri"
+            />
+          </div>
+          <div class="galeri-item">
+            <img
+              src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5649-utama_.jpg"
+              alt="Foto Galeri"
+            />
+          </div>
+          <div class="galeri-item">
+            <img
+              src="https://metadesa.id/LAMPUNG/PESAWARAN/PadangCermin/Banjaran/artikel/18_09_05_2001-5643-utama_.jpg"
+              alt="Foto Galeri"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Tentang Kami -->
+        <div class="footer-section">
+          <h3>Tentang Kami</h3>
+          <p>
+            Website ini memberikan informasi sementara pada Desa Banjaran. Kami
+            siap memberikan layanan dan informasi yang berguna untuk masyarakat.
+          </p>
+        </div>
+
+        <!-- Tautan Cepat -->
+        <div class="footer-section">
+          <h3>Tautan Cepat</h3>
+          <ul style="list-style: none">
+            <li><a href="#profil">Profil Desa</a></li>
+            <li><a href="#bkkbn">Bkkbn</a></li>
+            <li><a href="#meta-desa">Meta Desa</a></li>
+            <li><a href="#rumah-data">Rumah Data</a></li>
+            <li><a href="#idm">Idm</a></li>
+            <li><a href="#UMKM">UMKM Desa</a></li>
+          </ul>
+        </div>
+
+        <!-- Profil Desa -->
+        <div class="footer-section">
+          <h3>Profil Desa</h3>
+          <ul style="list-style: none; padding-left: 0">
+            <li><a href="#profil-wilayah">Profil Wilayah Desa</a></li>
+            <li><a href="#profil-potensi">Profil Potensi Desa</a></li>
+            <li><a href="#sejarah-desa">Sejarah Desa</a></li>
+            <li><a href="#visi-misi">Visi Misi Desa</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak -->
+        <div class="footer-section">
+          <h3>Kontak</h3>
+          <p>
+            Email:
+            <a href="mailto:pemdesbanjaran74@gmail.com"
+              >pemdesbanjaran74@gmail.com</a
+            >
+          </p>
+          <p>Telepon: <a href="tel:+6282282969009">082282969009</a></p>
+          <div class="social-links">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              class="social-icon facebook"
+            >
+              <img src="/assets/icons/facebook-brands.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="social-icon instagram"
+            >
+              <img src="/assets/icons/instagram-brands.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              class="social-icon youtube"
+            >
+              <img src="/assets/icons/youtube-brands.svg" alt="YouTube" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Desa Banjaran Pesawaran. Semua hak cipta dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="page-contents.js"></script>
+  </body>
+</html>

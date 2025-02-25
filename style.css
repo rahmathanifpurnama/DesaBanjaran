@@ -1,0 +1,963 @@
+/* RESET/UMUM */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Gunakan font tebal untuk h1 */
+}
+
+body,
+p,
+span,
+li,
+a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  cursor: default;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* ----- HEADER ----- */
+.header {
+  background: url("assets/images/Background_Image.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  padding: 60px 0 100px;
+}
+
+/* Overlay untuk efek gelap di background */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(57, 88, 145, 0.5);
+  z-index: 0;
+}
+
+/* Container utama header */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ----- LOGO DAN INFORMASI DESA ----- */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 110px;
+  margin-right: 30px;
+}
+
+.nama-desa {
+  display: flex;
+  flex-direction: column;
+}
+
+.nama-desa h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nama-desa p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ----- TITLE ----- */
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: max-content;
+}
+
+.title h1 {
+  font-size: 2rem; /* Perbesar ukuran jika perlu */
+  font-weight: bold;
+  text-transform: uppercase; /* Agar tulisan kapital semua */
+  line-height: 1;
+  text-shadow: 3px 3px 3px rgb(0, 0, 0); /* Bayangan teks */
+  margin-bottom: 1.5rem;
+}
+
+.prayer-schedule {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  color: #fff;
+  max-width: 300px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prayer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.prayer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.prayer-name {
+  font-size: 0.7rem;
+  margin-bottom: 3px;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.prayer-time {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.prayer-footer {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+/* NAVIGATION MENU */
+.main-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #2a4d94;
+  z-index: 2;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 50px; /* Tinggi tetap untuk navbar */
+}
+
+.main-nav li {
+  height: 100%; /* Tinggi mengikuti parent */
+  display: flex;
+  align-items: center;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: #ffffff33;
+}
+
+/* Icon Home */
+.home-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* Dropdown Navbar */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #395891;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Container with Grid */
+.main-container {
+  display: grid;
+  /* Dua kolom: kolom kiri (3fr) dan kolom kanan (1fr) */
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Kolom Kiri */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Jarak antar carousel, artikel, pagination */
+}
+
+/* Carousel Container */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Mengisi lebar kolom kiri */
+  max-width: 800px; /* Batas lebar maksimal */
+  margin: 0 auto; /* Agar center jika kurang dari 100% */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.carousel-item {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.carousel-caption h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Slider / Slide Wrapper */
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%; /* Pastikan gambar mengisi seluruh lebar container */
+  height: 460px; /* Mengisi tinggi container */
+  object-fit: cover; /* Menjaga rasio gambar dan menutupi container */
+  padding: 0; /* Hilangkan padding jika ada */
+  border-radius: 10px;
+}
+
+/* Tombol Prev & Next */
+.carousel-button {
+  position: absolute;
+  /* Contoh: 15% dari atas, atau pakai top: 50% + transform */
+  top: 47%;
+
+  width: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  transform: translateY(-4px);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* SVG di dalam tombol */
+.carousel-button svg {
+  width: 25px;
+  height: 25px;
+  stroke: #fff; /* warna outline */
+  stroke-width: 1.2; /* ketebalan garis */
+}
+
+/* Putar ikon PREV 180 derajat jika path default mengarah ke kanan.
+   Jika path default mengarah ke kiri, silakan dibalik. */
+.carousel-button.prev svg {
+  transform: rotate(180deg);
+}
+
+/* Container keseluruhan Artikel Terkini */
+.artikel-terkini {
+  max-width: 900px; /* Batasi lebar keseluruhan bagian artikel */
+}
+
+/* Supaya tiap artikel ditampilkan satu per satu ke bawah */
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Jarak antar-article */
+  align-items: center; /* Memusatkan artikel di dalam container */
+}
+
+/* Setiap article menjadi "kartu" mendatar */
+.articles article {
+  display: grid;
+  /* Dua kolom: kolom pertama 200px untuk gambar, kolom kedua sisa ruang */
+  grid-template-columns: 200px 1fr;
+  /* Dua baris: baris pertama untuk judul, baris kedua untuk paragraf */
+  grid-template-rows: auto auto;
+  gap: 10px;
+
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 800px; /* Tentukan lebar artikel sesuai keinginan Anda */
+  /* Jika Anda ingin artikel lebih responsif, gunakan max-width */
+  max-width: 100%; /* Artikel dapat menyesuaikan dengan lebar container tetapi tidak melampaui 500px */
+}
+
+/* Menghilangkan garis bawah pada anchor */
+.articles a {
+  text-decoration: none;
+}
+
+/* Gambar menempati kolom pertama, membentang dua baris (row 1 & 2) */
+.articles article img {
+  grid-column: 1;
+  grid-row: 1 / 3; /* Memanjang dari row 1 hingga row 2 */
+  width: 100%; /* Lebar penuh kolom (200px) */
+  max-height: 200px; /* Membatasi tinggi gambar */
+  height: auto; /* Agar gambar tetap menjaga proporsinya */
+  object-fit: cover; /* Menjaga gambar agar tetap menutupi ruangnya */
+  border-radius: 10px; /* Sudut membulat di kiri saja */
+}
+
+/* Anda dapat menyesuaikan tinggi dan lebar gambar untuk setiap artikel jika diinginkan */
+.articles article img.article-1 {
+  max-height: 150px; /* Sesuaikan ukuran gambar untuk artikel pertama */
+  height: 140px;
+}
+
+.articles article img.article-2 {
+  max-height: 180px; /* Sesuaikan ukuran gambar untuk artikel kedua */
+}
+
+/* Judul (h3) berada di kolom kedua, baris pertama */
+.articles article h3 {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 1.1em;
+  color: #333;
+  margin: auto 0;
+}
+
+/* Paragraf (p) berada di kolom kedua, baris kedua */
+.articles article p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0; /* Hilangkan margin default */
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Wrapper Pagination */
+.pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Info di atas pagination */
+.pagination-info {
+  margin-bottom: 10px;
+  color: #000; /* Teks hitam */
+  font-weight: bold;
+}
+
+/* Container untuk tombol & halaman */
+.pagination-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Jarak antar-tombol */
+}
+
+/* Tombol Panah Kiri/Kanan */
+.pagination-btn {
+  background-color: #fff; /* Warna putih */
+  color: #000; /* Teks hitam */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex; /* Supaya ikon center */
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.pagination-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor; /* Ikon mengikuti warna tombol (hitam) */
+}
+
+/* Efek hover tombol */
+.pagination-btn:hover {
+  background-color: #f0f0f0; /* Abu-abu terang */
+}
+
+/* Tombol Halaman */
+.pagination-page {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Efek hover halaman */
+.pagination-page:hover {
+  background-color: #f0f0f0;
+}
+
+/* Halaman aktif */
+.pagination-page.active {
+  background-color: #ccc; /* Contoh warna abu-abu untuk halaman aktif */
+  font-weight: bold;
+}
+
+/* Kolom Kanan: Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.map-container {
+  width: 100%; /* Lebar penuh dari kolom sidebar */
+  background-color: #395891;
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-sizing: border-box; /* Pastikan padding diperhitungkan dalam total lebar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.map-container h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.map-container iframe {
+  min-width: 350px; /* Pastikan minimal 400px */
+  min-height: 364px;
+  border-radius: 10px;
+}
+/* Container utama */
+.Penduduk {
+  background-color: #395891;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul "Jumlah Penduduk" dengan garis di bawah */
+.Penduduk h3 {
+  text-align: left;
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Kontainer untuk kotak-kotak penduduk */
+.penduduk-container {
+  display: flex;
+  justify-content: space-between; /* Kotak tersebar merata */
+  gap: 15px; /* Jarak horizontal antar kotak */
+}
+
+/* Kotak penduduk */
+.penduduk-box {
+  flex: 1;
+  background: linear-gradient(to bottom, #42a5f5, #2196f3);
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  padding: 20px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  /* Memastikan tinggi sama, jika ingin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ikon */
+.penduduk-box .icon {
+  margin-bottom: 10px;
+}
+
+.penduduk-box .icon svg {
+  width: 48px;
+  height: 48px;
+  fill: #fff; /* Warna ikon */
+}
+
+/* Angka jumlah */
+.penduduk-box .jumlah {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Label (PRIA, WANITA, TOTAL) */
+.penduduk-box .label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+/* Container Layanan */
+.layanan-container {
+  width: 100%;
+  max-width: 390px; /* Sesuaikan lebar */
+  height: 100%; /* Boleh diatur sesuai desain */
+  max-height: 324px; /* Contoh, agar tidak terlalu tinggi */
+  margin: 0 auto; /* Center */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: #395891;
+  position: relative; /* Penting agar tombol absolute menempel di container ini */
+}
+
+.layanan-container h3 {
+  text-align: left;
+  margin-bottom: 15px;
+  color: #fff;
+  margin-top: 0; /* Jika perlu hilangkan margin atas */
+}
+
+/* Track untuk menampung semua item */
+.layanan-track {
+  display: flex;
+  transition: transform 0.5s;
+  margin: 0 -10px;
+}
+.layanan-container .layanan-track a {
+  min-width: calc(100% - 20px);
+  margin: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2196f3, #6dd5fa);
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3sease;
+  padding: 20px;
+}
+
+/* Tombol navigasi (Chevron) */
+.layanan-btn {
+  position: absolute;
+  top: 50%;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0.8;
+  z-index: 2; /* Pastikan di atas item */
+  background: transparent;
+}
+
+.layanan-btn:hover {
+  transform: translateY(-4px);
+}
+
+.layanan-prev-btn {
+  left: 20px;
+}
+
+.layanan-next-btn {
+  right: 20px;
+}
+
+.layanan-btn svg {
+  width: 25px;
+  height: 25px;
+  stroke: #000; /* warna outline */
+  stroke-width: 1.2; /* ketebalan garis */
+}
+
+.layanan-item {
+  margin: 0 auto;
+}
+.layanan-track a {
+  text-decoration: none;
+}
+
+.layanan-item:hover {
+  transform: translateY(-4px);
+}
+
+/* SVG Ikon di dalam item */
+.layanan-icon {
+  width: 164px !important;
+  height: 164px !important;
+  margin-bottom: 10px;
+  fill: #fff;
+}
+
+.layanan-icon-ktp {
+  margin-left: 10px;
+}
+
+.layanan-icon-kk {
+  margin-left: 10px;
+}
+.layanan-icon-tidak-mampu {
+  margin-left: 50px;
+}
+
+.layanan-icon-keterangan-usaha {
+  margin-left: 20px;
+}
+
+.layanan-icon-keterangan-domisili {
+  margin-left: 25px;
+}
+
+.layanan-icon-keterangan-izin-keramaian {
+  margin-left: 57px;
+}
+/* Judul layanan */
+.layanan-item h5 {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Konten Wrapper - agar konten di tengah */
+.pemerintah-wrapper {
+  width: 80%; /* Bisa diubah ke 80% agar sejajar dengan konten di atas, misalnya */
+  margin: 0 auto;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Bagian Pemerintah Desa */
+.pemerintah-desa {
+  margin-bottom: 40px;
+}
+
+.pemerintah-desa h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.desa-wrapper {
+  width: 100%;
+  overflow: hidden; /* Hilangkan scrollbar di wrapper */
+  box-sizing: border-box; /* Pastikan padding dihitung */
+}
+
+/* Style untuk container pemerintah desa */
+.desa-container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style untuk track yang menampung card-card */
+.desa-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-out;
+}
+
+/* Style untuk setiap card */
+.desa-card {
+  background-color: #3b5998;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  flex-shrink: 0;
+  padding: 10px;
+  width: 219px; /* Tetapkan lebar tetap untuk card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.desa-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.desa-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  color: #000;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desa-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Menggunakan warna yang sama dengan parent */
+}
+
+.desa-btn:hover {
+  background: rgba(187, 184, 184, 0.5);
+  border-radius: 10px;
+}
+
+.desa-btn.prev {
+  left: 10px;
+}
+
+.desa-btn.next {
+  right: 10px;
+}
+
+/* Bagian Galeri */
+.galeri h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.galeri-item {
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  /* Tetapkan tinggi container */
+  height: 200px;
+  /* Lebar menyesuaikan grid (300px min) */
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.galeri-item img {
+  width: 100%;
+  height: 100%; /* Penuhi tinggi container */
+  object-fit: cover; /* Isi container tanpa distorsi, crop sisi yang berlebih */
+  border-radius: 8px;
+}
+
+.galeri-item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px; /* Sudut melengkung pada iframe */
+}
+
+.footer {
+  background-color: #395891;
+  color: #fff;
+  padding: 20px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  border-top: 1px solid #fff;
+  padding-top: 15px;
+}
+/* Tambahkan pada .footer-section untuk menampilkan dropdown seperti daftar */
+.footer-section .dropdown-content {
+  display: block; /* Menampilkan dropdown sebagai daftar */
+  padding-left: 15px;
+}
+
+.footer-section .dropdown-content a {
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect untuk link dalam dropdown */
+.footer-section .dropdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Gaya dropdown pada footer */
+.footer-section .dropdown {
+  display: none; /* Menyembunyikan dropdown */
+}
+
+.footer-section .dropdown:hover .dropdown-content {
+  display: block; /* Menampilkan dropdown saat hover */
+}
+
+/* Styling for social media icons */
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Warna sesuai dengan brand logo */
+.social-icon.facebook {
+  background-color: #3b5998; /* Facebook Blue */
+}
+
+.social-icon.instagram {
+  background-color: #e4405f; /* Instagram Red */
+}
+
+.social-icon.youtube {
+  background-color: #ff0000; /* YouTube Red */
+}

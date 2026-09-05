@@ -128,7 +128,37 @@ ul {
   margin-bottom: 20px;
 }
 
-/* Responsive adjustments */
+.article-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 0;
+}
+
+.news-detail h1 {
+  color: #2a4d94;
+  margin-bottom: 8px;
+}
+
+.news-detail time {
+  display: block;
+  color: #667085;
+  margin-bottom: 20px;
+}
+
+.news-detail img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.news-body {
+  white-space: pre-wrap;
+  line-height: 1.75;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .content-wrapper {

@@ -33,7 +33,7 @@ body {
 
 /* ----- HEADER ----- */
 .header {
-  background: url("assets/images/Background_Image.png") no-repeat center center;
+  background: url("../assets/images/Background_Image.png") no-repeat center center;
   background-size: cover;
   position: relative;
   color: #fff;
@@ -661,6 +661,12 @@ body {
 
 .layanan-item {
   margin: 0 auto;
+}
+.layanan-uploaded-icon {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 .layanan-track a {
   text-decoration: none;

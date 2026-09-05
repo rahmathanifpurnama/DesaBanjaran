@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin Portal — Desa Banjaran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <header class="admin-header">
+        <div class="admin-brand">
+            <img src="/assets/images/Kabupaten_Pesawaran.png" alt="Logo Desa Banjaran" class="admin-logo">
+            <div class="brand-text">
+                <h1>Admin Desa Banjaran</h1>
+                <p>Portal Pengelolaan Informasi Publik</p>
+            </div>
+        </div>
+        <div class="admin-user-nav">
+            <div class="user-pill">
+                <span class="user-avatar">👤</span>
+                <span id="adminName" class="user-name">Memuat...</span>
+            </div>
+            <a class="button secondary small" href="/" target="_blank" title="Buka website utama di tab baru">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Lihat Website
+            </a>
+            <button id="logoutButton" class="button danger small" title="Keluar dari sesi admin">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                Keluar
+            </button>
+        </div>
+    </header>
+
+    <div class="admin-shell">
+        <nav id="resourceNav" class="admin-nav" aria-label="Menu Konten"></nav>
+        <main class="admin-main">
+            <div class="toolbar">
+                <div>
+                    <h2 id="resourceTitle">Konten</h2>
+                    <p id="resourceDescription" class="muted"></p>
+                </div>
+                <button id="addButton" class="button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    Tambah Data
+                </button>
+            </div>
+            <p id="pageMessage" class="message" role="alert"></p>
+            <section class="panel">
+                <div id="tableContainer" class="loading">Memuat data…</div>
+            </section>
+        </main>
+    </div>
+
+    <dialog id="formDialog" class="dialog">
+        <form id="contentForm">
+            <div class="dialog-head">
+                <h2 id="formTitle">Tambah Data</h2>
+                <button class="button secondary small" value="cancel" formmethod="dialog" type="button" data-close>Tutup</button>
+            </div>
+            <div id="formFields" class="dialog-body"></div>
+            <p id="formMessage" class="message dialog-body" role="alert"></p>
+            <div class="dialog-foot">
+                <button class="button secondary" type="button" data-close>Batal</button>
+                <button class="button" type="submit">Simpan</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="viewDialog" class="dialog">
+        <div class="dialog-head">
+            <h2>Detail Data</h2>
+            <button class="button secondary small" type="button" data-view-close>Tutup</button>
+        </div>
+        <div id="viewContent" class="dialog-body"></div>
+    </dialog>
+
+    <script type="module" src="admin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "website-desa-banjaran",
+  "pages_build_output_dir": "public",
+  "compatibility_date": "2025-09-01",
+  "r2_buckets": [
+    {
+      "binding": "MEDIA_BUCKET",
+      "bucket_name": "desa-banjaran-media"
+    }
+  ],
+  "vars": {
+    "ADMIN_ALLOWED_CIDRS": "127.0.0.1/32,::1/128,192.168.1.2/32,192.168.1.0/24",
+    "SESSION_DAYS": "7",
+    "MAX_UPLOAD_BYTES": "5242880"
+  }
+}

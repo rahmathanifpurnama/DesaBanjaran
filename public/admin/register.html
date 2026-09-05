@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Daftar Admin — Desa Banjaran</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+    <main class="auth-shell">
+        <section class="auth-card">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="/assets/images/Kabupaten_Pesawaran.png" alt="Logo Desa Banjaran" style="height: 64px; margin-bottom: 10px;">
+                <p class="brand">DESA BANJARAN</p>
+                <h1>Daftar Admin</h1>
+                <p class="muted">Pendaftaran hanya dapat diakses dari jaringan Kelurahan.</p>
+            </div>
+            <form id="authForm" data-mode="register">
+                <div class="field">
+                    <label for="name">Nama Lengkap</label>
+                    <input id="name" name="name" minlength="2" maxlength="100" autocomplete="name" placeholder="Nama Petugas / IT" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="username" placeholder="nama@banjaran.desa.id" required>
+                </div>
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" minlength="10" maxlength="200" autocomplete="new-password" placeholder="Minimal 10 karakter" required>
+                </div>
+                <p id="message" class="message" role="alert"></p>
+                <button class="button" type="submit" style="width: 100%; padding: 12px;">Daftar Akun Admin</button>
+            </form>
+            <p class="muted" style="text-align: center; margin-top: 24px; font-size: 0.88rem;">
+                Sudah memiliki akun? <a href="login.html">Login ke Dashboard</a>
+            </p>
+        </section>
+    </main>
+    <script type="module" src="auth.js"></script>
+</body>
+
+</html>

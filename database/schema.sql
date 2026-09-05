@@ -1,0 +1,95 @@
+CREATE TABLE IF NOT EXISTS admin_users (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name TEXT NOT NULL CHECK (char_length(name) BETWEEN 2 AND 100),
+  email TEXT NOT NULL,
+  password_salt TEXT NOT NULL,
+  password_hash TEXT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE UNIQUE INDEX IF NOT EXISTS admin_users_email_lower_idx ON admin_users (LOWER(email));
+
+CREATE TABLE IF NOT EXISTS admin_sessions (
+  token_hash TEXT PRIMARY KEY,
+  user_id BIGINT NOT NULL REFERENCES admin_users(id) ON DELETE CASCADE,
+  expires_at TIMESTAMPTZ NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE INDEX IF NOT EXISTS admin_sessions_expiry_idx ON admin_sessions (expires_at);
+
+CREATE TABLE IF NOT EXISTS news (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  title TEXT NOT NULL CHECK (char_length(title) BETWEEN 3 AND 180),
+  slug TEXT NOT NULL UNIQUE,
+  excerpt TEXT NOT NULL DEFAULT '',
+  body TEXT NOT NULL,
+  image_key TEXT,
+  is_published BOOLEAN NOT NULL DEFAULT FALSE,
+  is_featured BOOLEAN NOT NULL DEFAULT FALSE,
+  published_at TIMESTAMPTZ,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS officials (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name TEXT NOT NULL CHECK (char_length(name) BETWEEN 2 AND 120),
+  position TEXT NOT NULL CHECK (char_length(position) BETWEEN 2 AND 160),
+  photo_key TEXT,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS gallery (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  title TEXT NOT NULL CHECK (char_length(title) BETWEEN 2 AND 180),
+  media_type TEXT NOT NULL CHECK (media_type IN ('image', 'youtube')),
+  image_key TEXT,
+  youtube_url TEXT,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  CHECK ((media_type = 'image' AND image_key IS NOT NULL) OR (media_type = 'youtube' AND youtube_url IS NOT NULL))
+);
+
+CREATE TABLE IF NOT EXISTS population (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  period TEXT NOT NULL UNIQUE CHECK (char_length(period) BETWEEN 4 AND 30),
+  male_count INTEGER NOT NULL CHECK (male_count >= 0),
+  female_count INTEGER NOT NULL CHECK (female_count >= 0),
+  idm_score NUMERIC(6, 4) DEFAULT 0.6423,
+  idm_minimum_score NUMERIC(6, 4) DEFAULT 0.7072,
+  idm_status TEXT DEFAULT 'BERKEMBANG',
+  idm_target TEXT DEFAULT 'MAJU',
+  is_current BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+ALTER TABLE population ADD COLUMN IF NOT EXISTS idm_score NUMERIC(6, 4) DEFAULT 0.6423;
+ALTER TABLE population ADD COLUMN IF NOT EXISTS idm_minimum_score NUMERIC(6, 4) DEFAULT 0.7072;
+ALTER TABLE population ADD COLUMN IF NOT EXISTS idm_status TEXT DEFAULT 'BERKEMBANG';
+ALTER TABLE population ADD COLUMN IF NOT EXISTS idm_target TEXT DEFAULT 'MAJU';
+CREATE UNIQUE INDEX IF NOT EXISTS population_one_current_idx ON population (is_current) WHERE is_current = TRUE;
+
+CREATE TABLE IF NOT EXISTS citizen_services (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name TEXT NOT NULL CHECK (char_length(name) BETWEEN 2 AND 160),
+  destination_url TEXT NOT NULL,
+  icon_key TEXT,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE TABLE IF NOT EXISTS village_locations (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  title TEXT NOT NULL CHECK (char_length(title) BETWEEN 2 AND 160),
+  embed_url TEXT NOT NULL,
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  is_active BOOLEAN NOT NULL DEFAULT TRUE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

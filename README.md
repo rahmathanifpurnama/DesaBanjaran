@@ -3,6 +3,7 @@
 Website publik dan halaman Admin berbasis vanilla JavaScript. Cloudflare Pages menayangkan file publik, Cloudflare Workers menjalankan backend, Cloudflare R2 menyimpan gambar, dan Neon PostgreSQL menyimpan data.
 
 Penjelasan setiap teknologi tersedia di [`docs/TECHNOLOGY.md`](docs/TECHNOLOGY.md).
+Panduan langkah deployment Cloudflare & Neon tersedia di [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
 
 ## Menjalankan secara lokal
 
